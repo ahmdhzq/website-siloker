@@ -1,0 +1,1496 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar Section */
+#navbar {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 1px 0 #797979;
+}
+#navbar .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: League Spartan;
+    min-height: 8vh;
+    transition: .3s ease ;
+}
+#navbar .nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+}
+#navbar .logo h1{
+    font-size: 35px;
+    color: #68c5f3;
+    margin: 0 60px;
+}
+#navbar .logo h1 span {
+    color: #f48434;
+}
+#navbar .nav-list ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar .nav-list ul li a{
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    color: #797979;
+    font-size: 18px;
+}
+#navbar .nav-list ul li a:hover {
+    color: #000;
+    transition-duration: .3s;
+}
+#navbar .search input {
+    border-radius: 5px;
+    border: 1px solid #5f63689d;
+    width: 150px;
+    height: 25px;
+    outline: none;
+}
+#navbar .login {
+    margin-left: 8vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#navbar .login button {
+    font-family: League Spartan;
+    font-size: 17px;
+    border: none;
+    background-color: #fff;
+}
+#navbar .login button a {
+    text-decoration: none;
+    color: #797979;
+}
+#navbar .login a:hover {
+    color: #000;
+}
+/* End Navbar */
+
+/* Hamburger menu */
+#navbar .menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+#navbar .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -11px;
+    top: -6px;
+    cursor: pointer;
+    z-index: 2;
+}
+#navbar .menu-toggle span { 
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #212529;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+/* Hamburger Animation */
+#navbar .menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+#navbar .menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+#navbar .menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg);
+}
+#navbar .menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg);
+}
+#navbar .menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+}
+/* hero */
+#hero .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 8vh;
+    z-index: 1;
+    height: 70vh;
+}
+#hero .container::after{
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #5755552a;
+    background-image: linear-gradient(90deg,#000 -12%,transparent 80%);
+    z-index: -1;
+}
+#hero .content-title h1 {
+    font-family: League Spartan;
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+#hero .content-title p{
+    font-family: League Spartan;
+    font-size: 18px;
+    color: #fff;
+    margin-top: -50px;
+    line-height: 1.1;
+}
+
+#hero .container .search-box input{
+    margin-top: 50px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 450px;
+    height: 50px;
+    padding: 0 10px;
+}
+#hero .container .search-box input:focus {
+    outline: none;
+    padding: 0 10px;
+}
+#hero .container .search-box button {
+    color: #fff;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #0385b8;
+    width: 120px;
+    height: 50px;
+    margin-left: -5px;
+}
+
+/* Content Home */
+#content-home .container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#content-home .total { 
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+#content-home .total-kerja {
+    width: 200px;
+    text-align: center;
+}
+#content-home .total-kerja h2 {
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content-home .total-kerja p {
+    margin-top: -10px;
+    font-family: IBM Plex Sans;
+}
+#content-home .low-unggulan {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+#content-home .low-unggulan h2{
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content-home .daftar-unggul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#content-home .logo-unggul img{
+    margin-top: 15px;
+    width: 70px;
+}
+#content-home .lok-unggul {
+    width: 500px;
+    box-shadow: 0 0 3px 0 #797979;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    margin: 20px;
+}
+#content-home .des-unggul {
+    margin: 0 10px;
+}
+#content-home .des-unggul p{
+    font-size: 15px;
+    font-family: IBM Plex Sans;
+}
+#content-home .des-unggul h3 {
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content-home .des-unggul h2{
+    font-family: League Spartan;
+    font-weight: 400;
+    margin-top: -5px;
+    font-size: 30px;
+}
+#content-home .address-unggul {
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: -10px;
+    margin-bottom: -15px;
+}
+#content-home .address-unggul img {
+    width: 17px;
+    height: 20px;
+}
+#content-home .address-unggul p{
+    font-family: IBM Plex Sans;
+    font-size: 15px;
+}
+#content-home .tgl {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: -10px;
+}
+#content-home .profil img {
+    width: 250px;
+    border-radius: 10px;
+}
+#content-home .profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+#content-home .profil h1 {
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content-home .profil .profil-border {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+}
+#content-home .profil .border-1,
+#content-home .profil .border-2 {
+    display: flex;
+    justify-content: space-around;
+}
+#content-home .profil .border-profil {
+    box-shadow: 0 0 1px 0 #474747;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px;
+    transform: scale(1);
+}
+#content-home .profil .border-profil:hover {
+    transform: scale(1.02);
+    transition-duration: .3s;
+}
+#content-home .profil p {
+    font-family: IBM Plex Sans;
+    text-align: center;
+}
+
+/* Content */
+#content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#content .tentang {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 73%;
+}
+#content .tentang p {
+    text-align: justify;
+    margin-top: -10px;
+    font-family: IBM Plex Sans;
+}
+#content .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: top;
+    margin-top: 20px;
+    margin: 0 auto;
+    width: 75%;
+}
+#content .container-berita {
+    flex-basis: 80%;
+}
+#content .list-berita {
+    font-family: IBM Plex Sans;
+    color: #212529;
+    padding-top: 10px;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 20%;
+}
+
+#content .list-berita ul li{
+    list-style: none;
+    padding: 5px 0;
+}
+#content .list-berita ul li:hover{
+    text-decoration: underline;
+}
+#content .berita {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#content h3 {
+    font-size: 20px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content h2 {
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content .content-beritalg {
+    box-shadow: 0 0 3px 0 #4c4d4e62;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 1100px;
+    height: 380px;
+}
+#content .container .content-beritalg img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 500px;
+}
+#content .content-beritalg .des-berita {
+    font-size: 17px;
+    font-family: IBM Plex Sans;
+    color: #212529;
+    text-align: justify;
+    padding: 20px;
+}
+#content .container a{
+    text-decoration: none;
+    color: #212529;
+}
+#content .content-beritasm {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1100px;
+}
+#content .content-beritasm .berita {
+    box-shadow: 0 0 3px 0 #4c4d4e62;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 330px;
+    font-family: IBM Plex Sans;
+    margin-bottom: 30px;
+}
+#content .content-beritasm .berita .des-sm {
+    padding: 0 10px;
+}
+#content .content-beritasm .berita .sm-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -20px;
+    font-size: 15px;
+}
+#content .content-beritasm .berita img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 330px;
+    height: 200px;
+}
+#content .content-beritasm .berita h3 {
+    margin-bottom: -5px;
+}
+
+/* Hero-detail */
+#hero-detail .container {
+    flex-direction: column;
+    background-color: #e9e9e9;
+    background-position: center;
+    position: relative;
+    margin-top: 8vh;
+    z-index: -10;
+    height: 25vh;
+}
+#hero-detail .daftar-back {
+    font-family: IBM Plex Sans;
+    margin-left: 20px;
+}
+#hero-detail .daftar-back a {
+    text-decoration: none;
+    color: #212529;
+}
+#hero-detail .daftar-back a:hover {
+    text-decoration: underline;
+}
+#hero-detail-berita .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/berita/lg2.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 8vh;
+    z-index: -10;
+    height: 35vh;
+}
+#hero-detail-berita .container::after{
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #57555542;
+    background-image: linear-gradient(90deg,#000 -12%,transparent 80%);
+    z-index: -1;
+}
+#hero-detail-berita .content-title h1 {
+    font-family: League Spartan;
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.1;
+}
+
+#hero-detail-berita .content-title p{
+    font-family: League Spartan;
+    font-size: 18px;
+    color: #fff;
+    margin-top: -50px;
+    line-height: 1.1;
+}
+/* Content dtl-lok */
+#content-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -13vh;
+    z-index: 2;
+}
+#content-detail .container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-left: 120px;
+}
+#content-detail .content-low {
+    box-shadow: 0 0 2px 0 #797979be;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px;
+    width: 40%;
+    margin-bottom: 50px;
+    flex-basis: 70%;
+}
+#content-detail .content-low h3 {
+    font-family: League Spartan;
+}
+#content-detail .content-low p,
+#content-detail .content-low ul li,
+#content-detail .content-low ol li {
+    font-family: IBM Plex Sans;
+    text-align: justify;
+}
+#content-detail .content-low hr {
+    border: 1px solid;
+}
+#content-detail .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+#content-detail .btn button {
+    width: 140px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0385b8;
+    color: #fff;
+    font-family: IBM Plex Sans;
+    cursor: pointer;
+}
+#content-detail .btn button:hover {
+    background-color: #026e99;
+    transition-duration: .3s;
+}
+#content-detail .head h5,
+#content-detail .head h2 {
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content-detail .address-low {
+    font-family: IBM Plex Sans;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+#content-detail .address-low img {
+    width: 15;
+    height: 20px;
+}
+#content-detail .low-lain {
+    margin-top: 70px;
+    margin-left: 30px;
+    flex-basis: 30%;
+}
+#content-detail .low-lain h2 {
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#content-detail .low-lain a {
+    text-decoration: none;
+    color: #000;
+    font-family: IBM Plex Sans;
+    font-size: 15px;
+}
+#content-detail .low-lain a:hover {
+    text-decoration: underline;
+}
+/* hero */
+#hero-low .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/lowongan/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 8vh;
+    z-index: 1;
+    height: 70vh;
+}
+#hero-low .container::after{
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: #5755552a;
+    background-image: linear-gradient(90deg,#000 -12%,transparent 80%);
+    z-index: -1;
+}
+#hero-low .hero-title h1 {
+    font-family: League Spartan;
+    color: #fff;
+    font-size: 60px;
+    line-height: 1.1;
+}
+#hero-low .hero-title p{
+    font-family: League Spartan;
+    font-size: 18px;
+    color: #fff;
+    margin-top: -50px;
+    line-height: 1.1;
+}
+/* end hero-low */
+
+/* lowongan */
+#lowongan .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+#lowongan .container h1 {
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#lowongan .content-1 h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+    margin-bottom:40px;
+}
+#lowongan .kategori {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#lowongan .kategori img {
+    width: 250px;
+    height: 200px;
+}
+#lowongan .kategori .kg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 0 3px 0 #4c4d4e62;
+    text-decoration: none;
+}
+#lowongan .kategori .kg h3 {
+    padding-top: 20px;
+    font-family: League Spartan;
+    color: #000;
+    font-weight: 500;
+}
+#lowongan .daftar-loker {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#lowongan .content-loker {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#lowongan .loker {
+    box-shadow: 0 0 3px 0 #4c4d4e62;
+    border-radius: 10px;
+    width: 350px;
+    line-height: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+#lowongan .loker a {
+    text-decoration: none;
+    color: #000;
+}
+#lowongan .loker a:hover {
+    text-decoration: underline;
+}
+#lowongan .loker .lok-title {
+    display: flex;
+    justify-content: space-between;
+    
+}
+#lowongan .loker img{
+    width: 70px;
+}
+#lowongan .loker h3 {
+    font-family: IBM Plex Sans;
+    font-weight: 500;
+}
+#lowongan .loker p {
+    font-family: IBM Plex Sans;
+    font-size: 15px;
+}
+#lowongan .address {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+#lowongan .address img{
+    width: 20px;
+    height: 20px;
+}
+#lowongan .address p {
+    font-size: 15px;
+    margin: 2px;
+}
+/* low-akutansi */
+#lowongan .des-loker {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 85%;
+}
+#lowongan .isi-loker {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 70%;
+}
+#lowongan .isi-loker .loker{
+    width: 400px;
+    margin: 40px 40px;
+}
+#lowongan .side-loker {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin-top: 10px;
+}
+#lowongan .side-loker h2 {
+    font-family: League Spartan;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+#lowongan .side-loker  li{
+    list-style: none;
+}
+#lowongan .side-loker li a {
+    text-decoration: none;
+    font-family: IBM Plex Sans;
+    font-size: 18px;
+    margin-left: -40px;
+    line-height: 2;
+    color: #000;
+}
+#lowongan .side-loker li a:hover {
+    text-decoration: underline;
+}
+/* end lowongan */
+
+/* Form Mitra*/
+#form {
+    margin-top: 10vh;
+    height: 90vh;
+}
+#form .daftar-back {
+    font-family: IBM Plex Sans;
+    margin-left: 30px;
+}
+#form .daftar-back a {
+    text-decoration: none;
+    color: #212529;
+}
+#form .daftar-back a:hover {
+    text-decoration: underline;
+}
+#form .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+}
+#form .container form {
+    width: 40vw;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 #797979;
+    border-radius: 10px;
+    line-height: 2;
+}
+#form .container form h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+}
+#form .container form td {
+    font-family: IBM Plex Sans;
+}
+#form .container .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+}
+#form .btn button {
+    width: 120px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0385b8;
+    color: #fff;
+    font-family: IBM Plex Sans;
+    font-size: 15px;
+}
+#form .btn button:hover {
+    background-color: #026e99;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+#form form textarea,
+#form form input,
+#form form select {
+    width: 500px;
+}
+/* End Form Mitra */
+
+/* Form Login */
+#form-login .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#form-login .container form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 0 0 2px 0 #797979;
+    padding: 20px 40px;
+    border-radius: 5px;
+    width: 17vw;
+}
+#form-login .container form h1{
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+    text-align: center;
+}
+#form-login .container form p {
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+}
+#form-login .container form button {
+    width: 120px;
+    height: 30px;
+    border: none;
+    background-color: #0385b8;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+#form-login .container form button:hover {
+    cursor: pointer;
+    background-color: #026e99;
+    transition-duration: .3s;
+}
+#form-login .form-mitra {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#form-login .form-mitra input{
+    border: 1px solid #474747;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+/* End Form Login */
+
+/* Daftar Mitra */
+#daftar-mitra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#daftar-mitra .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 9vh;
+    height: 170vh;
+}
+#daftar-mitra .container h1 {
+    font-size: 30px;
+    font-family: League Spartan;
+    font-weight: 500;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#daftar-mitra h3 {
+    font-size: 20px;
+    font-family: League Spartan;
+    font-weight: 500;
+} 
+#daftar-mitra p {
+    font-size: 15px;
+    font-family: IBM Plex Sans;
+    text-align: justify;
+}
+#daftar-mitra .daftar-back {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+#daftar-mitra .daftar-back a {
+    text-decoration: none;
+    color: #212529;
+}
+#daftar-mitra .daftar-back a:hover {
+    text-decoration: underline;
+}
+#daftar-mitra .des-mitra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+#daftar-mitra .des-mitra img {
+    height: 70px;
+    width: auto;
+    padding: 5px 0;
+}
+/* End Daftar Mitra */
+
+/* Kelola */
+#kelola {
+    margin-top: 15vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+#kelola h2{
+    font-family: League Spartan;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+}
+#kelola .table {
+    border-collapse: collapse;
+    position: relative;
+    margin: auto;
+    color: black;
+}
+#kelola .table th,
+#kelola .table td{
+    border: 1px solid #f5f5f5;
+    padding: 10px 17px;
+    text-align: center;
+    font-size: 20px;
+    font-family: IBM Plex Sans;
+}
+#kelola .table .header tr{
+    background-color: rgba(128, 128, 128, 0.764);
+    color: black;
+    border-color: white;
+    text-transform: uppercase;
+} 
+#kelola .table .child td{
+    color: black;
+}
+#kelola .table .child tr:nth-child(odd) td {
+    background-color: rgba(188, 184, 184, 0.396);
+}
+#kelola .table .child tr:hover td{
+    background-color: #42423d6b;
+    border-color: white;
+    transition: all .4s;
+}
+/* End Kelola */
+/* Pasang loker */
+#pasang-loker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#pasang-loker .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 2px 0 #797979;
+    padding: 30px;
+    border-radius: 10px;
+}
+#pasang-loker .container table {
+    line-height: 3;
+    font-family: IBM Plex Sans;
+    font-size: 16px;
+}
+#pasang-loker .container h1 {
+    font-family: League Spartan;
+    font-size: 30px;
+    font-weight: 500;
+}
+#pasang-loker .btn-pas button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0385b8;
+    color: #fff;
+    margin: 5px;
+}
+#pasang-loker .btn-pas button:hover {
+    background-color: #026e99;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+/* End pasang loker */
+
+/* footer */
+footer {
+    color: #383838;
+    font-family: League Spartan;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 30vh;
+    padding: 20px;
+    background-color: #e9e9e9;
+}
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .col .deskripsi {
+    line-height: 25px;
+    width: 400px;
+    text-align: justify;
+}
+footer h4 {
+    font-size: 20px;
+}
+footer p {
+    font-size: 18px;
+    margin: 0 0 8px 0;
+}
+footer a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #474747;
+    margin-bottom: 10px;
+}
+footer .row {
+    display: flex;
+    flex-direction: column;
+}
+footer .install .row img{
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0 15px 0;
+    width: 180px;
+}
+footer .follow img:hover,
+footer a:hover {
+    color: #000;
+}
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+/* end footer */
+
+/* Media Screen Tablet */
+@media screen and (max-width : 992px){
+    #navbar .logo {
+        margin-left: -90px;
+    }
+    #navbar .menu-toggle {
+        display: flex;
+        margin-right: -30px;
+    }
+    #navbar .nav-list {
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+    }
+    #navbar .nav-list ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #fff;
+        z-index: -10;
+        transform: translateX(100%);
+        transition: all .5s;
+        opacity: 0;
+    }
+    #navbar .nav-list ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    #navbar .nav-list ul li {
+        margin-top: 30px;
+    }
+    #navbar .login{
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+    }
+    #navbar .login button{
+        margin-left: -5px;
+        padding-top: 20px;
+    }
+    #hero .container .content-title {
+        margin-left: 100px;
+    }
+    #content-home .profil .profil-border{
+        justify-content: center;
+        margin-left: -42vh;
+    }
+    #pasang-loker .container {
+        display: flex;
+        flex-direction: column;
+        width: 650px;
+        margin: 30px 0;
+    }
+    #daftar-mitra .container{
+        height: 100%;
+    }
+    #daftar-mitra .container .des-mitra img{
+        height: 50px;
+    }
+    #daftar-mitra .daftar-back {
+        width: 100%;
+        justify-content: space-between;
+    }
+    #content .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #content .container .content-beritasm {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+    }
+    #content .container .content-beritalg {
+        flex-direction: column;
+        width: 600px;
+        height: fit-content;
+    }
+    #content .container .content-beritalg img {
+        width: 600px;
+        height: 400px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+    footer {
+        height: 60vh;
+    }
+    footer .col .deskripsi {
+        line-height: 25px;
+        width: 350px;
+        text-align: justify;
+    }
+    #form-login .container form {
+        width: 400px;
+    }
+    #form .container {
+        margin-top: 10vh;
+    }
+    #form .container form{
+        width: 600px;
+        padding: 10px;
+    }
+    #form form textarea,
+    #form form input,
+    #form form select {
+    width: 400px;
+    }
+    #kelola h2{
+        font-family: League Spartan;
+        font-weight: 500;
+        font-size: 25px;
+        text-align: center;
+    }
+    #kelola .table th,
+    #kelola .table td{
+        border: 1px solid #f5f5f5;
+        padding: 0px;
+        text-align: center;
+        font-size: 13px;
+        font-family: IBM Plex Sans;
+    }
+}
+
+/* Media Screen Mobile */
+@media screen and (max-width:767px) {
+    #navbar .logo {
+        margin-left: -90px;
+    }
+    #navbar .menu-toggle {
+        display: flex;
+        margin-right: -30px;
+    }
+    #navbar .nav-list {
+        position: absolute;
+        right: -40vw;
+        flex-direction: column;
+    }
+    #navbar .nav-list ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #fff;
+        z-index: -10;
+        transform: translateX(100%);
+        transition: all .5s;
+        opacity: 0;
+    }
+    #navbar .nav-list ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    #navbar .nav-list ul li {
+        margin-top: 30px;
+    }
+    #navbar .login{
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+    }
+    #navbar .login button{
+        text-align: left;
+        margin-left: -5px;
+        padding-top: 20px;
+    }
+    #hero .container {
+        align-items: flex-start;
+        margin-left: -50px;
+    }
+    #hero .container h1{
+        font-size: 30px;
+    }
+    #hero .container p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    #hero .container .search-box input{
+        width: 240px;
+        height: 40px;
+        margin-left: 20vw;
+    }
+    #hero .container .search-box button {
+        width: 100px;
+        height: 40px;
+    }
+    #content-home .total-kerja h2 {
+        font-size: 25px;
+    }
+    #content-home .total-kerja p {
+        font-size: 15px;
+    }
+    #content-home .lok-unggul {
+        width: 350px;
+    }
+    #content-home .des-unggul h3 {
+        font-size: 18px;
+    }
+    #content-home .des-unggul h2 {
+        font-size: 25px;
+    }
+    #content-home .address-unggul {
+        width: 250px;
+    }
+    footer {
+        height: 100vh;
+    }
+    footer .col .deskripsi {
+        line-height: 25px;
+        width: 350px;
+        text-align: justify;
+    }
+    #hero-low .container {
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    #hero-low .container h1{
+        font-size: 30px;
+    }
+    #hero-low .container p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    #lowongan .des-loker {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    #lowongan .isi-loker{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #lowongan .isi-loker .loker {
+        width: 330px;
+    }
+    #content-detail {
+        margin-top: 0;
+    }
+    #content-detail .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 800px;
+        margin-left: 0;
+    }
+    #content-detail .container .head img {
+        width: 70px;
+    }
+    #content-detail .container .low-lain {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 350px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+    #daftar-mitra .container{
+        height: 100%;
+    }
+    #daftar-mitra .container .des-mitra img{
+        height: 50px;
+    }
+    #daftar-mitra .daftar-back {
+        width: 100%;
+        justify-content: space-between;
+    }
+    #content .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #content .container .content-beritasm {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #content .container .content-beritalg {
+        flex-direction: column;
+        width: 350px;
+        height: fit-content;
+    }
+    #content .container .content-beritalg img {
+        width: 350px;
+        height: 240px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+    #hero-detail-berita .content-title h1 {
+        font-size: 35px;
+        margin-bottom: 60px;
+    }
+    #pasang-loker {
+        height: 100%;
+        margin-top: 8vh;
+    }
+    #pasang-loker .container {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        margin: 30px 0;
+    }
+    #pasang-loker table .kat {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #pasang-loker table tr td{
+        font-size: 15px;
+    }
+    #pasang-loker h1 {
+        text-align: center;
+    }
+    #form-login .container form {
+        width: 300px;
+    }
+    #form .container {
+        margin-top: 10vh;
+    }
+    #form .container form{
+        width: 360px;
+        padding: 10px;
+    }
+    #form form textarea,
+    #form form input,
+    #form form select {
+    width: 150px;
+    }
+    #kelola h2{
+        font-family: League Spartan;
+        font-weight: 500;
+        font-size: 25px;
+        text-align: center;
+    }
+    #kelola .table th,
+    #kelola .table td{
+        border: 1px solid #f5f5f5;
+        padding: 0px;
+        text-align: center;
+        font-size: 8px;
+        font-family: IBM Plex Sans;
+    }
+    #content-home .profil h1{
+        text-align: center;
+    }
+    #content-home .profil .border-1,
+    #content-home .profil .border-2 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 22vw;
+    }
+}
